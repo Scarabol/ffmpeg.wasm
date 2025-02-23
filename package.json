@@ -7,7 +7,7 @@
     "lint:root": "eslint tests",
     "build": "npm run build --workspace=packages --if-present",
     "pretest": "npm run build",
-    "serve": "http-server -c-1 -s -p 3000 .",
+    "serve": "http-server -c-1 -s -p 3000 . --coop",
     "test": "server-test test:browser:server 3000 test:all",
     "test:all": "npm-run-all test:browser:*:*",
     "test:browser": "mocha-headless-chrome -a enable-features=SharedArrayBuffer -a no-sandbox",
